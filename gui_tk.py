@@ -3,7 +3,8 @@ HEIGHT = 500
 WIDTH= 600
 
 def encrypt_fxn(str1,key):
-    fin = open("C:\emu8086\MyBuild\myfile.txt", "rt")
+    #fin = open("C:\emu8086\MyBuild\myfile.txt", "rt")
+    fin = open("XOR_3.asm", "rt")
     data = fin.read()
     data = data.replace('abcd', str1)
     data = data.replace('1234', key)
