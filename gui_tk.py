@@ -56,7 +56,7 @@ L2.place(relx=0.1, rely=0.25 , relwidth=0.35, relheight=0.06)
 entry2= tk.Entry(frame, bg='#fff5de')
 entry2.place(relx=0.5, rely=0.25 , relwidth=0.45, relheight=0.06)
 
-button = tk.Button(frame, text="Encrypt", bg='#56cc91', command=open_emulator)
+button = tk.Button(frame, text="Encrypt", bg='#56cc91' , command=lambda:encrypt_fxn(entry1.get(),entry2.get()))
 button.place(relx=0.2, rely=0.4 , relwidth=0.2, relheight=0.1)
 button = tk.Button(frame, text="Decrypt", bg='#db6063' , command= lambda:decrypt_fxn(entry1.get(),entry2.get()))
 button.place(relx=0.6, rely=0.4, relwidth=0.2, relheight=0.1)
