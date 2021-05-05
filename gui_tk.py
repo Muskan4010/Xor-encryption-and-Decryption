@@ -3,10 +3,10 @@ HEIGHT = 500
 WIDTH= 600
 
 def encrypt_fxn(str1,key):
-    file = open('input1.txt','w')
+    file = open('input1_str.txt','w')
     file.write(str1)
     file.close()
-    file = open('input2.txt','w')
+    file = open('input2_key.txt','w')
     file.write(key)
     file.close()
     e="encrypted string"
@@ -15,10 +15,10 @@ def encrypt_fxn(str1,key):
     
 
 def decrypt_fxn(str1,key):
-    file = open('input1.txt','w')
+    file = open('input1_str.txt','w')
     file.write(str1)
     file.close()
-    file = open('input2.txt','w')
+    file = open('input2_key.txt','w')
     file.write(key)
     file.close()
     d="decrypted string"
