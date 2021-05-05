@@ -12,9 +12,6 @@ def open_emulator():
     subprocess.call(
         [emulator_path, asm_path])
 
-HEIGHT = 500
-WIDTH= 600
-
 def encrypt_fxn(str1,key):
     fin = open("C:\emu8086\MyBuild\myfile.txt", "rt")
     data = fin.read()
