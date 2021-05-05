@@ -3,7 +3,6 @@ HEIGHT = 500
 WIDTH= 600
 
 def encrypt_fxn(str1,key):
-    #fin = open("C:\emu8086\MyBuild\myfile.txt", "rt")
     fin = open("XOR_3.asm", "rt")
     data = fin.read()
     data = data.replace('abcd', str1)
@@ -12,8 +11,12 @@ def encrypt_fxn(str1,key):
     fout = open("myfile_edit.asm", "wt")
     fout.write(data)
     fout.close()
+    import time
+    time.sleep(20)
 
-    e="encrypted string"
+    fin=open("C:\emu8086\MyBuild\myfile.txt", "rt")
+    e=fin.read()
+    fin.close
     print(str1,"string encrypted to",e)
     L3['text']= "ENCRYPTED STRING IS "+str(e)
     
