@@ -12,25 +12,25 @@ def open_emulator():
     subprocess.call(
         [emulator_path, asm_path])
 
+HEIGHT = 500
+WIDTH= 600
+
 def encrypt_fxn(str1,key):
-    file = open('input1_str.asm','w')
-    file.write(str1)
-    file.close()
-    file = open('input2_key.asm','w')
-    file.write(key)
-    file.close()
+    fin = open("C:\emu8086\MyBuild\myfile.txt", "rt")
+    data = fin.read()
+    data = data.replace('abcd', str1)
+    data = data.replace('1234', key)
+    fin.close()
+    fout = open("myfile_edit.asm", "wt")
+    fout.write(data)
+    fout.close()
+
     e="encrypted string"
     print(str1,"string encrypted to",e)
     L3['text']= "ENCRYPTED STRING IS "+str(e)
     
 
 def decrypt_fxn(str1,key):
-    file = open('input1_str.asm','w')
-    file.write(str1)
-    file.close()
-    file = open('input2_key.asm','w')
-    file.write(key)
-    file.close()
     d="decrypted string"
     print(str1,"string decrypted to",d)
     L3['text']="DECRYPTED STRING IS "+str(d)
