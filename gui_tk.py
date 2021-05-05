@@ -1,6 +1,16 @@
 import tkinter as tk
+import subprocess
+from tkinter import filedialog
+
 HEIGHT = 500
 WIDTH= 600
+
+# Open up desired program
+def open_emulator():
+    emulator_path=filedialog.askopenfilename()
+    asm_path = filedialog.askopenfilename()
+    subprocess.call(
+        [emulator_path, asm_path])
 
 def encrypt_fxn(str1,key):
     fin = open("XOR_3.asm", "rt")
