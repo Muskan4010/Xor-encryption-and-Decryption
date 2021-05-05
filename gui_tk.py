@@ -3,12 +3,24 @@ HEIGHT = 500
 WIDTH= 600
 
 def encrypt_fxn(str1,key):
+    file = open('input1.txt','w')
+    file.write(str1)
+    file.close()
+    file = open('input2.txt','w')
+    file.write(key)
+    file.close()
     e="encrypted string"
     print(str1,"string encrypted to",e)
     L3['text']= "ENCRYPTED STRING IS "+str(e)
     
 
 def decrypt_fxn(str1,key):
+    file = open('input1.txt','w')
+    file.write(str1)
+    file.close()
+    file = open('input2.txt','w')
+    file.write(key)
+    file.close()
     d="decrypted string"
     print(str1,"string decrypted to",d)
     L3['text']="DECRYPTED STRING IS "+str(d)
