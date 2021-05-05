@@ -12,6 +12,7 @@ s_size = $ - m1
 k db '1234' 
 
 filename db "myfile.txt", 0
+handle dw ?
 
 start:
 
@@ -33,23 +34,28 @@ next_char:
 loop next_char
        
 ;let's print it:       
-mov ah, 9
-mov dx, offset s
-int 21h 
+;mov ah, 9
+;mov dx, offset s
+;int 21h 
+
+;creating a file:
+mov ah, 3ch
+mov cx, 0
+mov dx, offset filename
+int 21h
+mov handle, ax
 
 ;storing in file:
-mov cx, 0
-mov dx, offset filename 
-mov ah, 3ch 
-int 21h
-         
-mov bx, offset filename
-mov cx, s_size
+mov ah, 40h         
+mov bx, handle
 mov dx, offset s
-mov ah, 40h
+mov cx, s_size
+int 21h
+
+;closing the file
+mov ah, 3eh
+mov bx, handle
 int 21h         
-
-
 
 ; wait for any key press:
 mov ah, 0
