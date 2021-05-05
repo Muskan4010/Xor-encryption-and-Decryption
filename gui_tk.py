@@ -1,6 +1,14 @@
 import tkinter as tk
+import os
+from tkinter import filedialog
+
 HEIGHT = 500
 WIDTH= 600
+
+# Open up desired program
+def open_emulator():
+    my_program=filedialog.askopenfilename()
+    os.system('"%s"' % my_program)
 
 def encrypt_fxn(str1,key):
     e="encrypted string"
