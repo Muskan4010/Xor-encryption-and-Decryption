@@ -23,7 +23,7 @@ def open_emulator(str1, key):
         [emulator_path, asm_path])
 
     # intentional delay
-    time.sleep(8)
+    time.sleep(1)
 
     encrypt_fxn(str1,key)
 

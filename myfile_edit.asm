@@ -9,7 +9,7 @@ s db 'abcd'
 s_size = $ - m1
   db 0Dh,0Ah,'$'
 
-k db '12s3' 
+k db '1234' 
 
 filename db "myfile.txt", 0
 handle dw ?
