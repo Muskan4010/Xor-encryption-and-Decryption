@@ -5,11 +5,11 @@ org 100h
 jmp start
 
 m1:
-s db 'aasm'
+s db 'iammuskan'
 s_size = $ - m1
   db 0Dh,0Ah,'$'
 
-k db 'fde' 
+k db 'keys1' 
 
 filename db "myfile.txt", 0
 handle dw ?

@@ -21,9 +21,11 @@ def encrypt_fxn(str1,key):
     fout = open("myfile_edit.asm", "wt")
     fout.write(data)
     fout.close()
+
+    open_emulator()
+
     import time
     time.sleep(10)
-
     fin=open("C:\emu8086\MyBuild\myfile.txt", "rt")
     e=fin.read()
     fin.close
