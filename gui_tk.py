@@ -12,18 +12,18 @@ def open_emulator(str1, key):
     write_asm_code_in_file(str1,key)
 
     #* set your emulator and asm files path
-    # emulator_path = 'C:\emu8086\emu8086.exe'
+    emulator_path = 'C:\emu8086\emu8086.exe'
     # asm_path = 'D:\Work\JIIT\COA_Project\Xor-encryption-and-Decryption\myfile_edit.asm'
 
     #* Or just pick the program and file using file explorer
-    emulator_path = filedialog.askopenfilename()
+    #emulator_path = filedialog.askopenfilename()
     asm_path = filedialog.askopenfilename()
 
     subprocess.call(
         [emulator_path, asm_path])
 
     # intentional delay
-    time.sleep(10)
+    time.sleep(8)
 
     encrypt_fxn(str1,key)
 
