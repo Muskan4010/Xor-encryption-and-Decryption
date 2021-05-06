@@ -23,7 +23,7 @@ def open_emulator(str1, key):
         [emulator_path, asm_path])
 
     # intentional delay
-    time.sleep(8)
+    time.sleep(1)
 
     encrypt_fxn(str1,key)
 
@@ -48,7 +48,6 @@ def encrypt_fxn(str1,key):
     fin=open("C:\emu8086\MyBuild\myfile.txt", "rt")
     e=fin.read()
     fin.close
-    e.decode("utf-8")
     print(str1,"string encrypted to",e)
     L3['text']= "ENCRYPTED STRING IS "+str(e)
     

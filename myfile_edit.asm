@@ -9,7 +9,11 @@ s db 'iammuskan'
 s_size = $ - m1
   db 0Dh,0Ah,'$'
 
+<<<<<<< HEAD
 k db 'joeyjoeyj' 
+=======
+k db '1234' 
+>>>>>>> 0623b79f051872e636217daf178c96bd5962572f
 
 filename db "myfile.txt", 0
 handle dw ?
