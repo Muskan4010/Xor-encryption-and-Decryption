@@ -34,7 +34,6 @@ def encrypt_fxn(str1,key):
 
     # intentional delay
     time.sleep(20)
-    print('reading file')
     fin=open("C:\emu8086\MyBuild\myfile.txt", "rt")
     e=fin.read()
     fin.close
