@@ -47,10 +47,10 @@ def encrypt_fxn(str1,key):
     L3['text']= "ENCRYPTED STRING IS "+str(e)
     
 
-def decrypt_fxn(str1,key):
-    d="decrypted string"
-    print(str1,"string decrypted to",d)
-    L3['text']="DECRYPTED STRING IS "+str(d)
+#def decrypt_fxn(str1,key):
+#    d="decrypted string"
+#    print(str1,"string decrypted to",d)
+#    L3['text']="DECRYPTED STRING IS "+str(d)
 
 root = tk.Tk()
 
@@ -73,16 +73,14 @@ L2.place(relx=0.1, rely=0.25 , relwidth=0.35, relheight=0.06)
 entry2= tk.Entry(frame, bg='#fff5de')
 entry2.place(relx=0.5, rely=0.25 , relwidth=0.45, relheight=0.06)
 
+
 button = tk.Button(frame, text="Encrypt", bg='#56cc91',
                    command=lambda: open_emulator(entry1.get(), entry2.get()))
 button.place(relx=0.2, rely=0.4 , relwidth=0.2, relheight=0.1)
-button = tk.Button(frame, text="Decrypt", bg='#db6063' , command= lambda:decrypt_fxn(entry1.get(),entry2.get()))
-button.place(relx=0.6, rely=0.4, relwidth=0.2, relheight=0.1)
+# button = tk.Button(frame, text="Decrypt", bg='#db6063' , command= lambda:decrypt_fxn(entry1.get(),entry2.get()))
+# button.place(relx=0.6, rely=0.4, relwidth=0.2, relheight=0.1)
 
 L3=tk.Label(frame, font='20')
 L3.place(relx= 0.1 , rely= 0.65 , relwidth= 0.8 , relheight= 0.3)
-
-
- 
 
 root.mainloop()
