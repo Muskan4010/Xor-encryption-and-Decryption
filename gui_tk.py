@@ -48,6 +48,7 @@ def encrypt_fxn(str1,key):
     fin=open("C:\emu8086\MyBuild\myfile.txt", "rt")
     e=fin.read()
     fin.close
+    e.decode("utf-8")
     print(str1,"string encrypted to",e)
     L3['text']= "ENCRYPTED STRING IS "+str(e)
     
