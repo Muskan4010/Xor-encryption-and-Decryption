@@ -9,7 +9,7 @@ s db 'iammuskan'
 s_size = $ - m1
   db 0Dh,0Ah,'$'
 
-k db 'keys1' 
+k db 'joey' 
 
 filename db "myfile.txt", 0
 handle dw ?
