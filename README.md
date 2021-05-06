@@ -2,7 +2,7 @@
 
 Tools used
 
-1) Python tkinter for gui 
+1) Python tkinter for gui
 2) emu8086 for assembly code
 
 1>EMU8086 INSTALLATION
@@ -10,7 +10,9 @@ Tools used
 * Download the emulator from  https://emu8086-microprocessor-emulator.en.softonic.com/
 * Emulator Registeration Key:
 > User:  ISHAAN,glaitm
+
 > Key:27R3VDEFYFX4N0VC3FRTQZX
+
 2> Python Idle Install:
 Download the Idle from https://www.python.org/downloads/
 
