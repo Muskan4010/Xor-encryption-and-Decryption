@@ -1,16 +1,26 @@
 import tkinter as tk
 import subprocess
+import time
 from tkinter import filedialog
 
 HEIGHT = 500
 WIDTH= 600
 
 # Open up desired program
-def open_emulator():
-    emulator_path=filedialog.askopenfilename()
-    asm_path = filedialog.askopenfilename()
+def open_emulator(str1, key):
+
+    #* set your emulator and asm files path
+    emulator_path = 'C:\emu8086\emu8086.exe'
+    asm_path = 'D:\Work\JIIT\COA_Project\Xor-encryption-and-Decryption\myfile_edit.asm'
+
+    #* Or just pick the program and file using file explorer
+    # emulator_path = filedialog.askopenfilename()
+    # asm_path = filedialog.askopenfilename()
+
     subprocess.call(
         [emulator_path, asm_path])
+
+    encrypt_fxn(str1,key)
 
 def encrypt_fxn(str1,key):
     fin = open("XOR_3.asm", "rt")
@@ -21,9 +31,10 @@ def encrypt_fxn(str1,key):
     fout = open("myfile_edit.asm", "wt")
     fout.write(data)
     fout.close()
-    import time
-    time.sleep(20)
 
+    # intentional delay
+    time.sleep(20)
+    print('reading file')
     fin=open("C:\emu8086\MyBuild\myfile.txt", "rt")
     e=fin.read()
     fin.close
@@ -57,7 +68,8 @@ L2.place(relx=0.1, rely=0.25 , relwidth=0.35, relheight=0.06)
 entry2= tk.Entry(frame, bg='#fff5de')
 entry2.place(relx=0.5, rely=0.25 , relwidth=0.45, relheight=0.06)
 
-button = tk.Button(frame, text="Encrypt", bg='#56cc91' , command=lambda:encrypt_fxn(entry1.get(),entry2.get()))
+button = tk.Button(frame, text="Encrypt", bg='#56cc91',
+                   command=lambda: open_emulator(entry1.get(), entry2.get()))
 button.place(relx=0.2, rely=0.4 , relwidth=0.2, relheight=0.1)
 button = tk.Button(frame, text="Decrypt", bg='#db6063' , command= lambda:decrypt_fxn(entry1.get(),entry2.get()))
 button.place(relx=0.6, rely=0.4, relwidth=0.2, relheight=0.1)
