@@ -28,6 +28,11 @@ def open_emulator(str1, key):
     encrypt_fxn(str1,key)
 
 def write_asm_code_in_file(str1,key):
+    
+    while(len(str1)>len(key)):
+        key=key+key
+    key = key[0:len(str1)]
+    
     fin = open("XOR_3.asm", "rt")
     data = fin.read()
     data = data.replace('abcd', str1)
